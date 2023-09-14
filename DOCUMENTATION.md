@@ -1,4 +1,3 @@
-# Flixx
 
 A simple CRUD RESTAPI 
 
@@ -21,24 +20,25 @@ A simple CRUD RESTAPI
 A personRoute.js file was created in route folder which has all the request endpoint
 
 router
-.get('/', controller.allPerson)
-.post('/api', personValidation, controller.createPerson)
-.get('/api/:user_id', controller.getSinglePerson)
-.put('/api/:user_id', controller.updatePerson)
+.get('/', controller.allPerson) <br>
+.post('/api', personValidation, controller.createPerson) <br>
+.get('/api/:user_id', controller.getSinglePerson) <br>
+.put('/api/:user_id', controller.updatePerson) <br>
 .delete('/api/:user_id', controller.deletePerson)
 
 <br>
 check the image below
-<img src="/assets/personRoutes2.JPG" width="30px">
+<img src="/assets/personRoutes2.JPG" width="">
 
 ## CRUD
 A personController.js file was created in the controllers folder that handles the CRUD operations
 <br>
 
 ## Post / Create a person
--router.post('/api', personValidation, controller.createPerson)
--Express validator was used to verify the input of users, only strings is required.
+-router.post('/api', personValidation, controller.createPerson) <br>
+-Express validator was used to verify the input of users, only strings is required. <br>
 
+##
 exports.createPerson = async (req, res) => {
     try {
         let name = req.body.name
@@ -60,26 +60,30 @@ exports.createPerson = async (req, res) => {
     }
 }
 <br>
-<img src="/assets/createPerson.JPG" width="30px">
+<img src="/assets/createPerson.JPG" width="">
 
 ## Response to post request
--If an integer was the input from the user and not a string value, an error message will be returned : see image below
-<img src="/assets/validation with an integer.JPG" width="30px">
+-If an integer was the input from the user and not a string value, an error message will be returned : see image below <br>
+<img src="/assets/validation with an integer.JPG">
+
 <br>
--An empty field posted by a user will return an error message : see image below
-<img src="/assets/Empty field validation.JPG" width="30px">
+-An empty field posted by a user will return an error message : see image below <br>
+<img src="/assets/Empty field validation.JPG">
 
--If all the conditions are satisfied, the post request will create a new person or user : see image below with postman
-<img src="/assets/Post person.JPG" width="30px">
+<br>
+-If all the conditions are satisfied, the post request will create a new person or user : see image below with postman <br>
+<img src="/assets/Post person.JPG">
+<br>
 
--The created person stored in the database(mongoDB)
+-The created person stored in the database(mongoDB) <br>
 <img src="/assets/DB person posted.JPG">
 
 ## Get a single person
--router.get('/api/:user_id', controller.getSinglePerson)
--Get a single person through the id(user_id)
+-router.get('/api/:user_id', controller.getSinglePerson) <br>
+-Get a single person through the id(user_id) <br>
 <br>
 
+##
 exports.getSinglePerson = async(req, res) => {
     try {
         const user_id = req.params.user_id
@@ -106,19 +110,20 @@ exports.getSinglePerson = async(req, res) => {
         res.status(500).json({ message: err });
     }
 }
-
+<br>
 <img src="/assets/Get single person.JPG">
 
 ## Response to Get single person request
--If an invalid id is passed - an invalid id error message will be returned
+-If an invalid id is passed - an invalid id error message will be returned <br>
 <img src="/assets/Invalid ID.JPG">
+<br>
 
--If the correct id is passed - the person details will be returned 
+-If the correct id is passed - the person details will be returned <br>
 <img src="/assets/GetSIngle person.JPG">
-
+<br>
 
 ## Update a single person
--router.put('/api/:user_id', controller.updatePerson) - PUT request
+-router.put('/api/:user_id', controller.updatePerson) - PUT request <br>
 
 exports.updatePerson = async (req, res) => {
     try {
@@ -151,22 +156,24 @@ exports.updatePerson = async (req, res) => {
         res.status(400).json({ message: err });
     }
 }
-
+<br>
 <img src="/assets/Update a person.JPG">
 
+<br>
+
 ## Response to Get single person request
--If an invalid id is passed - an invalid id error message will be returned
-<img src="/assets/Invalid ID.JPG">
+-If an invalid id is passed - an invalid id error message will be returned <br>
+<img src="/assets/Invalid ID.JPG"> <br>
 
--If the correct id is passed - the person details will be updated 
-<img src="/assets/update paul2.JPG">
+-If the correct id is passed - the person details will be updated  <br>
+<img src="/assets/update paul2.JPG"> <br>
 
--The details will be updated in db too
-<img src="/assets/updated paul in DB.JPG">
+-The details will be updated in db too <br>
+<img src="/assets/updated paul in DB.JPG"> 
 <br>
 
 ## Delete a single person
--router.delete('/api/:user_id', controller.deletePerson)
+-router.delete('/api/:user_id', controller.deletePerson) <br>
 
 //Delete a person -- 
 exports.deletePerson = async (req, res) => {
@@ -194,22 +201,23 @@ exports.deletePerson = async (req, res) => {
         res.status(400).json({ message: err });
     }
 }
-
+<br>
 <img src="/assets/Delete single person.JPG">
 <br>
 
 ## Response to Delete single person request
--Agian, if an invalid id is passed - an invalid id error message will be returned
-<img src="/assets/Invalid ID.JPG">
+-Agian, if an invalid id is passed - an invalid id error message will be returned <br>
+<img src="/assets/Invalid ID.JPG"> <br>
 
--If the correct id is passed - the person details will be deleted and also deleted from the db 
+-If the correct id is passed - the person details will be deleted and also deleted from the db  <br>
 <img src="/assets/deleted paul2.JPG">
 
 <br>
 
 ## Added feature
 ## - Get all persons
--router.get('/', controller.allPerson)
+
+-router.get('/', controller.allPerson) <br>
 
 //Get all persons
 exports.allPerson = async (req, res) => {
@@ -230,7 +238,7 @@ exports.allPerson = async (req, res) => {
         console.log(err)
     }
 }
-
+<br>
 <img src="/assets/Get all person.JPG">
 
 ## Response to Get all person
