@@ -14,7 +14,7 @@ A simple CRUD RESTAPI
 - NODEJS
 - EXPRESS
 - MONGODB
--Postman for testing
+- Postman for testing
 
 ## Request
 A personRoute.js file was created in route folder which has all the request endpoint
@@ -35,8 +35,8 @@ A personController.js file was created in the controllers folder that handles th
 <br>
 
 ## Post / Create a person
--router.post('/api', personValidation, controller.createPerson) <br>
--Express validator was used to verify the input of users, only strings is required. <br>
+- router.post('/api', personValidation, controller.createPerson) <br>
+- Express validator was used to verify the input of users, only strings is required. <br>
 
 ##
     try {
@@ -62,24 +62,24 @@ A personController.js file was created in the controllers folder that handles th
 <img src="/assets/createPerson.JPG" width="">
 
 ## Response to post request
--If an integer was the input from the user and not a string value, an error message will be returned : see image below <br>
+- If an integer was the input from the user and not a string value, an error message will be returned : see image below <br>
 <img src="/assets/validation with an integer.JPG">
 
 <br>
--An empty field posted by a user will return an error message : see image below <br>
+- An empty field posted by a user will return an error message : see image below <br>
 <img src="/assets/Empty field validation.JPG">
 
 <br>
--If all the conditions are satisfied, the post request will create a new person or user : see image below with postman <br>
+- If all the conditions are satisfied, the post request will create a new person or user : see image below with postman <br>
 <img src="/assets/Post person.JPG">
 <br>
 
--The created person stored in the database(mongoDB) <br>
+- The created person stored in the database(mongoDB) <br>
 <img src="/assets/DB person posted.JPG">
 
 ## Get a single person
--router.get('/api/:user_id', controller.getSinglePerson) <br>
--Get a single person through the id(user_id) <br>
+- router.get('/api/:user_id', controller.getSinglePerson) <br>
+- Get a single person through the id(user_id) <br>
 <br>
 
 ##
@@ -112,16 +112,16 @@ A personController.js file was created in the controllers folder that handles th
 <img src="/assets/Get single person.JPG">
 
 ## Response to Get single person request
--If an invalid id is passed - an invalid id error message will be returned <br>
+- If an invalid id is passed - an invalid id error message will be returned <br>
 <img src="/assets/Invalid ID.JPG">
 <br>
 
--If the correct id is passed - the person details will be returned <br>
+- If the correct id is passed - the person details will be returned <br>
 <img src="/assets/GetSIngle person.JPG">
 <br>
 
 ## Update a single person
--router.put('/api/:user_id', controller.updatePerson) - PUT request <br>
+- router.put('/api/:user_id', controller.updatePerson) - PUT request <br>
 
     try {
         let user_id = req.params.user_id
@@ -159,20 +159,19 @@ A personController.js file was created in the controllers folder that handles th
 <br>
 
 ## Response to Get single person request
--If an invalid id is passed - an invalid id error message will be returned <br>
+- If an invalid id is passed - an invalid id error message will be returned <br>
 <img src="/assets/Invalid ID.JPG"> <br>
 
--If the correct id is passed - the person details will be updated  <br>
+- If the correct id is passed - the person details will be updated  <br>
 <img src="/assets/update paul2.JPG"> <br>
 
--The details will be updated in db too <br>
+- The details will be updated in db too <br>
 <img src="/assets/updated paul in DB.JPG"> 
 <br>
 
 ## Delete a single person
--router.delete('/api/:user_id', controller.deletePerson) <br>
+- router.delete('/api/:user_id', controller.deletePerson) <br>
 
-//Delete a person -- 
     try {
         let user_id = req.params.user_id
         if(!mongoose.Types.ObjectId.isValid(user_id)){
@@ -202,20 +201,18 @@ A personController.js file was created in the controllers folder that handles th
 <br>
 
 ## Response to Delete single person request
--Agian, if an invalid id is passed - an invalid id error message will be returned <br>
+- Agian, if an invalid id is passed - an invalid id error message will be returned <br>
 <img src="/assets/Invalid ID.JPG"> <br>
 
--If the correct id is passed - the person details will be deleted and also deleted from the db  <br>
+- If the correct id is passed - the person details will be deleted and also deleted from the db  <br>
 <img src="/assets/deleted paul2.JPG">
 
-<br>
 
 ## Added feature
 ## - Get all persons
 
--router.get('/', controller.allPerson) <br>
+- router.get('/', controller.allPerson) <br>
 
-//Get all persons
     try {
         const persons =  await Person.find({})
         if(persons) {
