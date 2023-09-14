@@ -14,7 +14,7 @@ A simple CRUD RESTAPI
 - NODEJS
 - EXPRESS
 - MONGODB
-- Postman for testing
+- Postman 
 
 ## Request
 A personRoute.js file was created in route folder which has all the request endpoint
@@ -38,7 +38,7 @@ A personController.js file was created in the controllers folder that handles th
 - router.post('/api', personValidation, controller.createPerson) <br>
 - Express validator was used to verify the input of users, only strings is required. <br>
 
-##
+
     try {
         let name = req.body.name
         const errors = validationResult(req)
@@ -74,7 +74,7 @@ A personController.js file was created in the controllers folder that handles th
 <img src="/assets/Post person.JPG">
 <br>
 
-- The created person stored in the database(mongoDB) <br>
+- The created person will also be stored in the database(mongoDB) <br>
 <img src="/assets/DB person posted.JPG">
 
 ## Get a single person
@@ -82,7 +82,6 @@ A personController.js file was created in the controllers folder that handles th
 - Get a single person through the id(user_id) <br>
 <br>
 
-##
     try {
         const user_id = req.params.user_id
         if(!mongoose.Types.ObjectId.isValid(user_id)){
