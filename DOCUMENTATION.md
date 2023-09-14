@@ -39,7 +39,6 @@ A personController.js file was created in the controllers folder that handles th
 -Express validator was used to verify the input of users, only strings is required. <br>
 
 ##
-exports.createPerson = async (req, res) => {
     try {
         let name = req.body.name
         const errors = validationResult(req)
@@ -58,7 +57,7 @@ exports.createPerson = async (req, res) => {
     } catch (err) {
         res.status(500).json({ message: err });
     }
-}
+
 <br>
 <img src="/assets/createPerson.JPG" width="">
 
@@ -84,7 +83,6 @@ exports.createPerson = async (req, res) => {
 <br>
 
 ##
-exports.getSinglePerson = async(req, res) => {
     try {
         const user_id = req.params.user_id
         if(!mongoose.Types.ObjectId.isValid(user_id)){
@@ -109,7 +107,7 @@ exports.getSinglePerson = async(req, res) => {
     } catch (err) {
         res.status(500).json({ message: err });
     }
-}
+
 <br>
 <img src="/assets/Get single person.JPG">
 
@@ -125,7 +123,6 @@ exports.getSinglePerson = async(req, res) => {
 ## Update a single person
 -router.put('/api/:user_id', controller.updatePerson) - PUT request <br>
 
-exports.updatePerson = async (req, res) => {
     try {
         let user_id = req.params.user_id
         if(!mongoose.Types.ObjectId.isValid(user_id)){
@@ -155,7 +152,7 @@ exports.updatePerson = async (req, res) => {
     } catch (err) {
         res.status(400).json({ message: err });
     }
-}
+
 <br>
 <img src="/assets/Update a person.JPG">
 
@@ -176,7 +173,6 @@ exports.updatePerson = async (req, res) => {
 -router.delete('/api/:user_id', controller.deletePerson) <br>
 
 //Delete a person -- 
-exports.deletePerson = async (req, res) => {
     try {
         let user_id = req.params.user_id
         if(!mongoose.Types.ObjectId.isValid(user_id)){
@@ -200,7 +196,7 @@ exports.deletePerson = async (req, res) => {
     } catch (err) {
         res.status(400).json({ message: err });
     }
-}
+
 <br>
 <img src="/assets/Delete single person.JPG">
 <br>
@@ -220,7 +216,6 @@ exports.deletePerson = async (req, res) => {
 -router.get('/', controller.allPerson) <br>
 
 //Get all persons
-exports.allPerson = async (req, res) => {
     try {
         const persons =  await Person.find({})
         if(persons) {
@@ -237,7 +232,7 @@ exports.allPerson = async (req, res) => {
     } catch (err) {
         console.log(err)
     }
-}
+
 <br>
 <img src="/assets/Get all person.JPG">
 
@@ -247,7 +242,7 @@ exports.allPerson = async (req, res) => {
 <br>
 
 ## Assumption
--Since mongoDB create an id by default the mongoDB created id was used.
+-Since mongoDB create an id by default, the mongoDB created id was used.
 
 
 
