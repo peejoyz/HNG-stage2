@@ -33,6 +33,7 @@ A personController.js file was created in the controllers folder that handles th
 - router.post('/api', personValidation, controller.createPerson) : https://hngstage2-k63k.onrender.com/api <br> 
 - Express validator was used to verify the input of users, only strings is required. <br>
 
+    ```
     try {
         let name = req.body.name
         const errors = validationResult(req)
@@ -51,6 +52,7 @@ A personController.js file was created in the controllers folder that handles th
     } catch (err) {
         res.status(500).json({ message: err });
     }
+    ```
 
 <br>
 <img src="/assets/createPerson.JPG" width="">
