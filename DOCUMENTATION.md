@@ -30,7 +30,7 @@ A personController.js file was created in the controllers folder that handles th
 <br>
 
 ## Post / Create a person
-- router.post('/api', personValidation, controller.createPerson) : localhost:3000/api <br> 
+- router.post('/api', personValidation, controller.createPerson) : https://hngstage2-k63k.onrender.com/api <br> 
 - Express validator was used to verify the input of users, only strings is required. <br>
 
 
@@ -73,9 +73,8 @@ A personController.js file was created in the controllers folder that handles th
 <img src="/assets/DB person posted.JPG">
 
 ## Get a single person
-- router.get('/api/:user_id', controller.getSinglePerson) : localhost:3000/api/user_id <br>
+- router.get('/api/:user_id', controller.getSinglePerson) : https://hngstage2-k63k.onrender.com/api/user_id :user_id - id of user(person) from the database  <br>
 - Get a single person through the id(user_id) <br>
-<br>
 
     try {
         const user_id = req.params.user_id
@@ -115,7 +114,7 @@ A personController.js file was created in the controllers folder that handles th
 <br>
 
 ## Update a single person
-- router.put('/api/:user_id', controller.updatePerson) - PUT request : localhost:3000/api/user_id <br>
+- router.put('/api/:user_id', controller.updatePerson) - PUT request : https://hngstage2-k63k.onrender.com/api/user_id <br>
 
     try {
         let user_id = req.params.user_id
@@ -164,7 +163,7 @@ A personController.js file was created in the controllers folder that handles th
 <br>
 
 ## Delete a single person
-- router.delete('/api/:user_id', controller.deletePerson) : localhost:3000/api/user_id <br>
+- router.delete('/api/:user_id', controller.deletePerson) : https://hngstage2-k63k.onrender.com/api/user_id <br>
 
     try {
         let user_id = req.params.user_id
@@ -205,7 +204,7 @@ A personController.js file was created in the controllers folder that handles th
 ## Added feature
 ## - Get all persons
 
-- router.get('/', controller.allPerson) <br>
+- router.get('/', controller.allPerson) : https://hngstage2-k63k.onrender.com/ <br>
 
     try {
         const persons =  await Person.find({})

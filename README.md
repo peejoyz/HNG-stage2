@@ -1,6 +1,10 @@
 
 A simple CRUD RESTAPI that performs basic create, read, update and delete operation on a person.
 
+## Live URL
+
+- [hngstage2](https://hngstage2-k63k.onrender.com/api)
+
 ## Requirement
 -Nodejs is installed on local machine<br>
 -MongoDB is Installed.
