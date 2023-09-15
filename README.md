@@ -5,7 +5,7 @@ A simple CRUD RESTAPI that performs basic create, read, update and delete operat
 -Nodejs is installed on local machine<br>
 -MongoDB is Installed.
 
-## Run
+## Running the server locally
 -Open your terminal <br>
 -Clone the repo with 'git clone'
 -Install all dependencies with 'npm install'<br>
