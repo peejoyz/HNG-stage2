@@ -23,7 +23,7 @@ router
 
 <br>
 check the image below
-<img src="/assets/personRoutes2.JPG" width="">
+<img src="/assets/personRoutes2.JPG">
 
 ## CRUD
 A personController.js file was created in the controllers folder that handles the CRUD operations
