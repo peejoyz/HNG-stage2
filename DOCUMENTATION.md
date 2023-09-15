@@ -1,11 +1,6 @@
 
 A simple CRUD RESTAPI 
 
-## Live Preview
-
-- [Flixx](https://flixx.cyclic.app/)
-
-
 ## Features
 
 - CRUD operation on person(user) Create, Edit, update and delete a person
@@ -35,7 +30,7 @@ A personController.js file was created in the controllers folder that handles th
 <br>
 
 ## Post / Create a person
-- router.post('/api', personValidation, controller.createPerson) <br>
+- router.post('/api', personValidation, controller.createPerson) : localhost:3000/api <br> 
 - Express validator was used to verify the input of users, only strings is required. <br>
 
 
@@ -78,7 +73,7 @@ A personController.js file was created in the controllers folder that handles th
 <img src="/assets/DB person posted.JPG">
 
 ## Get a single person
-- router.get('/api/:user_id', controller.getSinglePerson) <br>
+- router.get('/api/:user_id', controller.getSinglePerson) : localhost:3000/api/user_id <br>
 - Get a single person through the id(user_id) <br>
 <br>
 
@@ -120,7 +115,7 @@ A personController.js file was created in the controllers folder that handles th
 <br>
 
 ## Update a single person
-- router.put('/api/:user_id', controller.updatePerson) - PUT request <br>
+- router.put('/api/:user_id', controller.updatePerson) - PUT request : localhost:3000/api/user_id <br>
 
     try {
         let user_id = req.params.user_id
@@ -169,7 +164,7 @@ A personController.js file was created in the controllers folder that handles th
 <br>
 
 ## Delete a single person
-- router.delete('/api/:user_id', controller.deletePerson) <br>
+- router.delete('/api/:user_id', controller.deletePerson) : localhost:3000/api/user_id <br>
 
     try {
         let user_id = req.params.user_id
