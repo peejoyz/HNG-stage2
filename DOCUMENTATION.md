@@ -11,6 +11,9 @@ A simple CRUD RESTAPI
 - MONGODB
 - Postman 
 
+## UML Diagram
+<img src="/assets/UML.JPG"> <br>
+
 ## Request
 A personRoute.js file was created in route folder which has all the request endpoint
 
